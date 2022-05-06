@@ -7,22 +7,22 @@ $classe=[
     [
         'nome'=> 'Alberto',
         'cognome'=> 'Rossi',
-        $voti=[8, 6, 5, 6, 7]
+        'voti'=>[8, 6, 5, 6, 7]
     ],
     [
         'nome'=> 'Mario',
         'cognome'=> 'Super',
-        $voti=[4, 9, 8, 4, 7]
+        'voti'=>[4, 9, 8, 4, 7]
     ],
     [
         'nome'=> 'Angelica',
         'cognome'=> 'Gozzi',
-        $voti=[10, 10, 8, 6, 7]
+        'voti'=>[10, 10, 8, 6, 7]
     ],
     [
         'nome'=> 'Lucrezia',
         'cognome'=> 'Rodriguez',
-        $voti=[8, 9, 5, 6, 7]
+        'voti'=>[8, 9, 5, 6, 7]
     ],
 ];
 
@@ -41,9 +41,7 @@ $classe=[
     <p>
     <?php 
     for($i=0; $i< count($classe); $i++) {
-         $media=array_sum($voti);
-         $media /=5;
-        echo $classe[$i]['nome'] . "-" . $classe[$i]['cognome'] . " | " . $media . "<br/>";
+        echo $classe[$i]['nome'] . "-" . $classe[$i]['cognome'] . " | " . array_sum($classe[$i]['voti'] )/4 . "<br/>";
     }
     ?>
 </p>

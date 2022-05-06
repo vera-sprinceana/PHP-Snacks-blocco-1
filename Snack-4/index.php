@@ -6,7 +6,7 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
     $arrayNumeri=[];
     $nItem=15;
     $min= 1;
-    $max= 1000;
+    $max= 500;
 
            
 ?>
@@ -26,14 +26,12 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
         <?php
             while (count($arrayNumeri) <$nItem){
                 $number= rand($min, $max);
-                echo $number;
                     if(!in_array($number, $arrayNumeri)){
-                        $arrayNumeri[]=$number. " - ";
-                    }    
+                        $arrayNumeri[]=$number;
+                    }      
             }
-        return $arrayNumeri;
-      var_dump($arrayNumeri) ;  
-        
+            var_dump($arrayNumeri) ; 
+            return $arrayNumeri;
         ?>
     </p>
 </body>
